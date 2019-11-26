@@ -23,4 +23,4 @@ ARG RELEASE
 RUN confluent-hub install --no-prompt debezium/debezium-connector-sqlserver:0.10.0
 
 ## Install custom jars
-COPY --from=build /kafka-connect-jdbc/target/kafka-connect-jdbc-${RELEASE}.jar /etc/kafka-connect/jars/
+COPY --from=build /kafka-connect-jdbc/target/kafka-connect-jdbc-${RELEASE}-package/share/java/kafka-connect-jdbc/*.jar /etc/kafka-connect/jars/
